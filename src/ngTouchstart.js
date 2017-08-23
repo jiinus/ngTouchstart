@@ -2,7 +2,7 @@
 
 angular.module("ngTouchstart", []).directive("ngTouchstart", function () {
   return {
-    controller: function ($scope, $element, $attrs) {
+    link: function ($scope, $element, $attrs) {
       $element.bind('touchstart', onTouchStart);
       
       function onTouchStart(event) {
